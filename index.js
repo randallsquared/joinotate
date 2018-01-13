@@ -1,18 +1,12 @@
 const Joi = require('joi');
 const Boom = require('boom');
 
-const validate = (handler, options = {
-  abortEarly: true,
-  allowUnknown: true
-}) => {
+const validate = (handler, options = { abortEarly: true, allowUnknown: true }) => {
   if (!handler.joi) return handler;
 
   const schema = Joi.object(handler.joi);
   const wrapper = async(req, res) => {
-    const {
-      error,
-      value
-    } = Joi.validate(req, schema, options);
+    const { error, value } = Joi.validate(req, schema, options);
     if (error) {
       let error_message;
       try {
