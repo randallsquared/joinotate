@@ -1,0 +1,13 @@
+{
+  "name": "joinotate",
+  "version": "1.0.0",
+  "description": "A tiny micro handler annotation validator using Joi",
+  "main": "index.js",
+  "repository": "git@github.com:randallsquared/joinotate.git",
+  "author": "Randall Randall <randall@randallsquared.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "boom": "^7.1.1",
+    "joi": "^13.1.0"
+  }
+}
